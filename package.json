@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "npx nodemon"
   },
   "author": "Hcode Treinamentos",
   "license": "ISC",
@@ -15,5 +15,8 @@
     "express": "^4.16.3",
     "express-validator": "^5.1.2",
     "nedb": "^1.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }

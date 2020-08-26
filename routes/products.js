@@ -24,10 +24,19 @@ module.exports = app => {
 
     route.post((req, res) => {
         
+        if (!app.utils.validator.product(app, req, res)) return false;
+
         db.insert(req.body, (err, product)=>{
 
-            res.status(200).json(product);
+            if (err) {
 
+                app.utils.error.send(err, req, res);
+
+            } else {
+
+                res.status(200).json(product);
+                
+            }
         });
 
     });

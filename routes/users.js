@@ -35,7 +35,9 @@ module.exports = app => {
         db.insert(req.body, (err, user)=>{
 
             if (err) {
+
                 app.utils.error.send(err, req, res);
+                
             } else {
 
                 res.status(200).json(user);
